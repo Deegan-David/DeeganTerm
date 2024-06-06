@@ -30,6 +30,7 @@ fn main() {
         let mut arg = String::new();
 
         init(&flag);
+        flag = String::new();
 
         std::io::stdin().read_line(&mut arg).unwrap();
         arg.pop();
