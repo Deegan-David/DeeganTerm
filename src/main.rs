@@ -1,5 +1,6 @@
 // Main file
 
 fn main() {
-    println!("Hello, git!");
+    let args: Vec<String> = std::env::args().collect();
+    println!("{:?}", args);
 }
