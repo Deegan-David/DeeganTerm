@@ -8,6 +8,7 @@
 */
 use std::io::{self, Write};
 
+
 fn init(flag: &String) {
     clearscreen::clear().expect("failed to clear screen");
     println!("##    ____                            ______                  ##");
@@ -45,3 +46,7 @@ fn main() {
         //let _wait = std::io::stdin().read_line(&mut line).unwrap();
     }
 }
+
+/*
+    cherry was here :3
+*/
