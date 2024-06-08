@@ -10,6 +10,7 @@ mod help;
 use std::io::{self, Write};
 
 
+
 fn init(flag: &String) {
     clearscreen::clear().expect("failed to clear screen");
     println!(
