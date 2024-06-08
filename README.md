@@ -9,6 +9,7 @@
 ```
 A simple terminal program made in rust.
 
+```
 fn Roadmap(){
     //Basic Features
         //Update
@@ -20,3 +21,4 @@ fn Roadmap(){
     //DeeganDollar Wallet
         //A psuedo crypto currency to learn crytography
 }
+```
