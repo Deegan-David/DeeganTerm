@@ -8,3 +8,17 @@
                 /____/
 ```
 A simple terminal program made in rust.
+
+```
+fn Roadmap(){
+    //Basic Features
+        //Update
+        //Version menu
+        //Config
+
+    //Peer to Peer encrypted chat.
+
+    //DeeganDollar Wallet
+        //A psuedo crypto currency to learn crytography
+}
+```
