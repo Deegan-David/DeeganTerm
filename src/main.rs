@@ -6,6 +6,7 @@
 /_____/\___/\___/\__, /\__,_/_/ /_/_/  \___/_/  /_/ /_/ /_/ 
                 /____/
 */
+mod help;
 use std::io::{self, Write};
 
 
@@ -42,6 +43,8 @@ fn main() {
         match arg.trim() {
         
             "quit" => break,
+
+            "help" => help::command_help(),
 
             _ => flag = format!("\"{arg}\" is not a valid command.\n").to_string(),
         }
