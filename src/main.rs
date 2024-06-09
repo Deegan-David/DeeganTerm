@@ -7,8 +7,9 @@
                 /____/
 */
 mod help;
+mod commands;
 use std::io::{self, Write};
-
+const version: &str = "v0.3-beta";
 
 fn init(flag: &String) {
     clearscreen::clear().expect("failed to clear screen");
@@ -18,7 +19,7 @@ r"##    ____                            ______                  ##
 ##  / / / / _ \/ _ \/ __ `/ __ `/ __ \/ / / _ \/ ___/ __ `__ \##
 ## / /_/ /  __/  __/ /_/ / /_/ / / / / / /  __/ /  / / / / / /##
 ##/_____/\___/\___/\__, /\__,_/_/ /_/_/  \___/_/  /_/ /_/ /_/ ##
-##                /____/                                      ##"
+##                /____/             v0.3-beta                ##"
 );
     println!("             Enter \"help\" for a list of commands.");
     print!("{}", flag);
@@ -45,6 +46,8 @@ fn main() {
             "quit" => break,
 
             "help" => help::command_help(),
+
+            "version" => commands::version(version),
 
             _ => flag = format!("\"{arg}\" is not a valid command.\n").to_string(),
         }

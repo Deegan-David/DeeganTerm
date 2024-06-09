@@ -6,6 +6,8 @@ pub fn command_help() {
 
 "help" - Pulls up this screen.
 
+"version" - Prints out the current version string.
+
 Press enter to continue..."#);
 
     let buffer = &mut [0u8];
