@@ -9,7 +9,7 @@
 mod help;
 mod commands;
 use std::io::{self, Write};
-const version: &str = "v0.3-beta";
+const VERSION: &str = "v0.3-beta";
 
 fn init(flag: &String) {
     clearscreen::clear().expect("failed to clear screen");
@@ -47,7 +47,7 @@ fn main() {
 
             "help" => help::command_help(),
 
-            "version" => commands::version(version),
+            "version" => commands::version(VERSION),
 
             _ => flag = format!("\"{arg}\" is not a valid command.\n").to_string(),
         }
