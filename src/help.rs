@@ -8,6 +8,8 @@ pub fn command_help() {
 
 "version" - Prints out the current version string.
 
+"install" - Installs program to system.
+
 Press enter to continue..."#);
 
     let buffer = &mut [0u8];

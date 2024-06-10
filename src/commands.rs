@@ -1,6 +1,6 @@
 use std::path::Path;
 use std::io::Read;
-use std::process::Command;
+use std::process::{Command, exit};
 
 pub fn version(var: &str) {
 
@@ -8,9 +8,7 @@ pub fn version(var: &str) {
     println!(
 r"--Patch notes--
 Added this section.
-Added install to system script.
-
-"
+Added installer."
 );
     println!("Press enter to continue...");
     
@@ -22,20 +20,29 @@ pub fn install() {
 
     if Path::new("/usr/local/bin/DeeganTerm").exists() {
         
-        println!("File Exists");
+        println!("Program is already installed.");
+    } else {
+
+        //Runs the command "sudo cp DeeganTerm /usr/local/bin/DeeganTerm";
+        let mut process = Command::new("sudo")
+            .arg("cp")
+            .arg("DeeganTerm")
+            .arg("/usr/local/bin/DeeganTerm")
+            .spawn()
+            .expect("Command Failed To Run");
+
+        let mut _result = process.wait().unwrap();
+
+        process = Command::new("rm")
+            .arg("DeeganTerm")
+            .spawn()
+            .expect("Command Failed To Run");
+
+        _result = process.wait().unwrap();
+
+        println!("Program will now exit.");
+        exit(0);
     }
-
-/*
-    //Runs the command "sudo cp DeeganTerm /usr/local/bin/DeeganTerm";
-    let mut process = Command::new("sudo")
-        .arg("cp")
-        .arg("DeeganTerm")
-        .arg("/usr/local/bin/DeeganTerm")
-        .spawn()
-        .expect("Command Failed To Run");
-
-    let _result = process.wait().unwrap();
-*/
     println!("Press enter to continue...");
     
     let buffer = &mut [0u8];
