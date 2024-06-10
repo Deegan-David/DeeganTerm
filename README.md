@@ -13,7 +13,7 @@ A simple terminal program made in rust.
 fn Roadmap(){
     //Basic Features
         //Installer ✅
-        //Update
+        //Updater
         //Version menu ✅
         //Config
 
