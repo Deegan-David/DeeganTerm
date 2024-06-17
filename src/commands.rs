@@ -2,6 +2,7 @@ use std::path::Path;
 use std::io::Read;
 use std::process::{Command, exit};
 
+
 pub fn version(var: &str) {
 
     println!("{}", format!("\"{var}\" is the current version string.").to_string());
@@ -15,6 +16,7 @@ Added installer."
     let buffer = &mut [0u8];
     std::io::stdin().read_exact(buffer).unwrap();
 }
+
 
 pub fn install() {
 
