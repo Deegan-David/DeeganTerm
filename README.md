@@ -7,7 +7,7 @@
 /_____/\___/\___/\__, /\__,_/_/ /_/_/  \___/_/  /_/ /_/ /_/ 
                 /____/
 ```
-A simple terminal program made in rust.
+A simple terminal program made in rust with nvim.
 
 ```
 fn Roadmap(){
