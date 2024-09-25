@@ -10,7 +10,7 @@
 A simple terminal program made in rust with nvim.
 
 ```
-fn Roadmap(){
+fn Roadmap() {
     //Basic Features
         //Installer ✅
         //Updater
